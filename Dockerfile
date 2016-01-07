@@ -11,9 +11,9 @@ RUN apt-get update && apt-get install -y \
   && rm -rf /var/lib/apt/lists/*
 
 RUN mkdir -p /usr/local/libradtran/ \
-  && curl -SL http://www.libradtran.org/download/history/libRadtran-1.7.tar.gz \
+  && curl -SL http://www.libradtran.org/download/history/libRadtran-1.4.tar.gz \
 	| tar -xzC /usr/local/libradtran/ \
-  && cd /usr/local/libradtran/libRadtran-1.7 \
+  && cd /usr/local/libradtran/libRadtran-1.4 \
   && ./configure && make
 
-ENV PATH /usr/local/libradtran/libRadtran-1.7/bin:$PATH
+ENV PATH /usr/local/libradtran/libRadtran-1.4/bin:$PATH
