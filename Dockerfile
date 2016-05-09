@@ -11,9 +11,9 @@ RUN apt-get update && apt-get install -y \
   && rm -rf /var/lib/apt/lists/*
 
 RUN mkdir -p /opt/ \
-  && curl -SL http://www.libradtran.org/download/history/libRadtran-2.0.tar.gz \
+  && curl -SL http://www.libradtran.org/download/libRadtran-2.0.1.tar.gz \
     | tar -xzC /opt/ \
-  && mv /opt/libRadtran-2.0 /opt/libRadtran \
+  && mv /opt/libRadtran-2.0.1 /opt/libRadtran \
   && cd /opt/libRadtran \
   && ./configure && make
 
